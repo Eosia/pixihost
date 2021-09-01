@@ -74,9 +74,9 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
     <div class="row mx-auto">
 
-        <article class=" col-12 mx-auto border border-primary p-5">
+        <article class="col-12 mx-auto border border-primary p-5">
 
-            <h3>Hébergez votre image</h3>
+            <h3 class="mx-auto text-center">Hébergez votre image</h3>
 
             <?php
             if (isset($error) && $error == 0) {

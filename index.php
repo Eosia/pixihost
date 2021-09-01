@@ -33,12 +33,18 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
     <style rel="stylesheet">
 
+        *, ::before, ::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            }
+
         .main {
             min-height: 60vh;
         }
 
         .img-tumb {
-            max-width: 512px;
+            max-width: 80vw;
             height: auto;
         }
 
@@ -68,14 +74,14 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 
     <div class="row mx-auto">
 
-        <article class="mx-auto border border-primary p-5">
+        <article class=" col-12 mx-auto border border-primary p-5">
 
             <h3>Hébergez votre image</h3>
 
             <?php
             if (isset($error) && $error == 0) {
                 echo '
-                      <img class="img-tumb mx-auto mt-3" src="' . $address . '">
+                      <img class="img-tumb mx-auto mt-3 col-10" src="' . $address . '">
                       <br>
                       <p class="text-uppercase mx-auto mt-5 mb-3 text-center">L\'url de votre image est :</p>
                       <input class="mx-auto col-12 py-2 px-3 border border-primary" type="text" value="https://pixihost.eosia.dev/' . $address . '">';
